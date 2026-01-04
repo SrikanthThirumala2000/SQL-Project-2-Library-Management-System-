@@ -31,13 +31,13 @@ This project illustrates how to use SQL to construct a library management system
     
     (
     
-    branch_id VARCHAR(10) PRIMARY KEY,
-    
-    manager_id VARCHAR(10),
-    
-    branch_address VARCHAR(80),
-    
-    contact_no VARCHAR(15)
+              branch_id VARCHAR(10) PRIMARY KEY,
+              
+              manager_id VARCHAR(10),
+              
+              branch_address VARCHAR(80),
+              
+              contact_no VARCHAR(15)
     
     );
     
@@ -49,17 +49,17 @@ This project illustrates how to use SQL to construct a library management system
     
     (
     
-    emp_id VARCHAR(10) PRIMARY KEY,
-    
-    emp_name VARCHAR(30),
-    
-    position VARCHAR(30),
-    
-    salary DECIMAL(10,2),
-    
-    branch_id VARCHAR(10),
-    
-    FOREIGN KEY (branch_id) REFERENCES branch(branch_id)
+            emp_id VARCHAR(10) PRIMARY KEY,
+            
+            emp_name VARCHAR(30),
+            
+            position VARCHAR(30),
+            
+            salary DECIMAL(10,2),
+            
+            branch_id VARCHAR(10),
+            
+            FOREIGN KEY (branch_id) REFERENCES branch(branch_id)
     
     );
     
@@ -71,13 +71,13 @@ This project illustrates how to use SQL to construct a library management system
     
     (
     
-    member_id VARCHAR(10) PRIMARY KEY,
-    
-    member_name VARCHAR(30),
-    
-    member_address VARCHAR(80),
-    
-    reg_date DATE
+            member_id VARCHAR(10) PRIMARY KEY,
+            
+            member_name VARCHAR(30),
+            
+            member_address VARCHAR(80),
+            
+            reg_date DATE
     
     );
     
@@ -89,19 +89,19 @@ This project illustrates how to use SQL to construct a library management system
     
     (
     
-    isbn VARCHAR(50) PRIMARY KEY,
-    
-    book_title VARCHAR(80),
-    
-    category VARCHAR(30),
-    
-    rental_price DECIMAL(10,2),
-    
-    status VARCHAR(10),
-    
-    author VARCHAR(30),
-    
-    publisher VARCHAR(30)
+            isbn VARCHAR(50) PRIMARY KEY,
+            
+            book_title VARCHAR(80),
+            
+            category VARCHAR(30),
+            
+            rental_price DECIMAL(10,2),
+            
+            status VARCHAR(10),
+            
+            author VARCHAR(30),
+            
+            publisher VARCHAR(30)
     
     );
     
@@ -113,23 +113,23 @@ This project illustrates how to use SQL to construct a library management system
     
     (
     
-    issued_id VARCHAR(10) PRIMARY KEY,
-    
-    issued_member_id VARCHAR(10),
-    
-    issued_book_name VARCHAR(80),
-    
-    issued_date DATE,
-    
-    issued_book_isbn VARCHAR(50),
-    
-    issued_emp_id VARCHAR(10),
-    
-    FOREIGN KEY (issued_member_id) REFERENCES members(member_id),
-    
-    FOREIGN KEY (issued_emp_id) REFERENCES employees(emp_id),
-    
-    FOREIGN KEY (issued_book_isbn) REFERENCES books(isbn)
+            issued_id VARCHAR(10) PRIMARY KEY,
+            
+            issued_member_id VARCHAR(10),
+            
+            issued_book_name VARCHAR(80),
+            
+            issued_date DATE,
+            
+            issued_book_isbn VARCHAR(50),
+            
+            issued_emp_id VARCHAR(10),
+            
+            FOREIGN KEY (issued_member_id) REFERENCES members(member_id),
+            
+            FOREIGN KEY (issued_emp_id) REFERENCES employees(emp_id),
+            
+            FOREIGN KEY (issued_book_isbn) REFERENCES books(isbn)
     
     );
     
@@ -141,17 +141,17 @@ This project illustrates how to use SQL to construct a library management system
     
     (
     
-    return_id VARCHAR(10) PRIMARY KEY,
-    
-    issued_id VARCHAR(30),
-    
-    return_book_name VARCHAR(80),
-    
-    return_date DATE,
-    
-    return_book_isbn VARCHAR(50),
-    
-    FOREIGN KEY (return_book_isbn) REFERENCES books(isbn)
+            return_id VARCHAR(10) PRIMARY KEY,
+            
+            issued_id VARCHAR(30),
+            
+            return_book_name VARCHAR(80),
+            
+            return_date DATE,
+            
+            return_book_isbn VARCHAR(50),
+            
+            FOREIGN KEY (return_book_isbn) REFERENCES books(isbn)
     
     );
 
