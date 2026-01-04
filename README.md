@@ -1,11 +1,10 @@
-Markdown
-**Library Management System using SQL Project -- P2**
+# Library Management System using SQL
 
-**Project Overview**
+## Project Overview
 
 This project illustrates how to use SQL to construct a library management system. It involves running advanced SQL queries, carrying out CRUD tasks, and building and maintaining tables. The objective is to demonstrate expertise in creating a database, manipulation, and querying.
 
-**Objectives**
+## Objectives
 
 - **Set up the Library Management System Database**: Create and populate the database with tables for branches, employees, members, books, issued status, and return status.
 - **CRUD Operations**: Perform Create, Read, Update, and Delete operations on the data.
@@ -20,11 +19,11 @@ This project illustrates how to use SQL to construct a library management system
   - Created a database/ schema named \`p2_library_management_system\`.
   - Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
 
-\-- Library Management System
+-- Library Management System
 
     CREATE DATABASE p2_library_management_system;
 
-\-- create table "branch"
+-- create table "branch"
 
 DROP TABLE IF EXISTS branch;
 
