@@ -14,7 +14,7 @@ This project illustrates how to use SQL to construct a library management system
 
 **Project Structure**
 
-![alt text](ERD.png)
+![ERD](ERD.png)
 
 - **Database Creation and Table Creation**
   - Created a database/ schema named \`p2_library_management_system\`.
@@ -22,7 +22,7 @@ This project illustrates how to use SQL to construct a library management system
 
 \-- Library Management System
 
-CREATE DATABASE p2_library_management_system;
+    CREATE DATABASE p2_library_management_system;
 
 \-- create table "branch"
 
